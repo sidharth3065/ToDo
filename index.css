@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #80808024;
+    color: blue;
+}
+
+#outerDivContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#todo-app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 11px 3px gray;
+    background: white;
+}
+
+#render-todo-list {
+    width: 100%;
+    border-top: 1px dotted grey;
+    height: 280px;
+    overflow: auto;
+    border-bottom: 1px solid grey;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    width: 100%;
+}
+
+.row div:hover {
+    color: rgb(173, 12, 206);
+    cursor: pointer;
+}
+
+.item-row {
+    display: flex;
+    width: 97%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+}
+
+.task-content {
+    display: flex;
+    gap: 10px;
+}
+
+#input-div-container {
+    border: 1px solid gray;
+    padding: 2px 5px;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+
+#input-div-container:hover #add-task-btn {
+    display: inline-block;
+}
+
+#input-div-container input {
+    border: 0;
+    height: 40px;
+    width: 92%;
+    font-size: 1.2rem;
+}
+
+#input-div-container input:focus-visible {
+    outline: none;
+}
+
+#add-task-btn {
+    display: none;
+}
+
+input[type="button"],
+button {
+    border: 0;
+    background: transparent;
+    padding: 1px 3px;
+    cursor: pointer;
+}
+
+#ClearAll,
+#ClearChecked {
+    border: 0;
+    font-size: x-small;
+}
+
+#ClearAll:hover,
+#ClearChecked:hover {
+    border: 0;
+    font-size: x-small;
+    color: rgb(173, 12, 206);
+}
+
+#notification-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 2px 2px 6px 2px gray;
+    visibility: hidden;
+}
+
+#notification-content {
+    margin-top: 5px;
+}
+
+.close-notification-btn {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+.todocontent {
+    display: none;
+}
+
+.item-row:hover .todocontent {
+    display: inline-block;
+}
+
+
+/* media tags responsive design */
+
+@media screen and (max-width:400px) {
+    #todo-app-container {
+        width: 88%;
+    }
+}
+
+@media screen and (min-width:400px) {
+    #todo-app-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #todo-app-container {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width:767px) {
+    #todo-app-container {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #todo-app-container {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #todo-app-container {
+        width: 50%;
+    }
+}
